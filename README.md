@@ -38,6 +38,7 @@ The system helps financial institutions identify high-risk customers and optimiz
 
 # 🧠 Analytical Pipeline Overview
 
+```text
 ┌──────────────────────────────┐
 │          Raw Data            │
 └──────────────┬───────────────┘
@@ -76,7 +77,7 @@ The system helps financial institutions identify high-risk customers and optimiz
 ┌──────────────────────────────┐
 │        Business Insights     │
 └──────────────────────────────┘
-
+```
 
 ---
 
