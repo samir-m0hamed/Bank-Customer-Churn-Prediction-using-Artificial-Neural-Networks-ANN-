@@ -5,8 +5,6 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
 ![Keras](https://img.shields.io/badge/Keras-Deep%20Learning-red.svg)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-yellow.svg)
-![Accuracy](https://img.shields.io/badge/Test%20Accuracy-85.65%25-brightgreen.svg)
-![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 
 ---
 
@@ -40,21 +38,45 @@ The system helps financial institutions identify high-risk customers and optimiz
 
 # 🧠 Analytical Pipeline Overview
 
-Raw Data  
-↓  
-Data Cleaning  
-↓  
-Feature Engineering  
-↓  
-Feature Scaling  
-↓  
-Artificial Neural Network Training  
-↓  
-Model Evaluation  
-↓  
-Performance Interpretation  
-↓  
-Business Insights  
+┌──────────────────────────────┐
+│          Raw Data            │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│        Data Cleaning         │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│     Feature Engineering      │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│        Feature Scaling       │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│   ANN Model Training         │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│       Model Evaluation       │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│   Performance Interpretation │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│        Business Insights     │
+└──────────────────────────────┘
+
 
 ---
 
@@ -65,7 +87,7 @@ The dataset contains demographic and financial information about bank customers.
 ### Input Features
 
 | Feature | Description |
-|---|---|
+|-----------|-----------|
 | CreditScore | Financial reliability indicator |
 | Geography | Country of residence |
 | Gender | Customer gender |
@@ -81,7 +103,7 @@ The dataset contains demographic and financial information about bank customers.
 
 | Variable | Meaning |
 |---|---|
-| Exited | 1 = Customer left bank, 0 = Customer stayed |
+| Exited | 1 = Customer left bank  ,  0 = Customer stayed |
 
 ---
 
@@ -101,11 +123,17 @@ These variables do not contribute to predictive modeling and may introduce noise
 
 ## Categorical Encoding
 
-Binary Encoding  
-Gender → Female = 0, Male = 1  
+| Gender | Binary Encoding |
+|---|---|
+| Female | 0 |
+| Male   | 1 |
 
-Label Encoding  
-Geography → France = 0, Spain = 1, Germany = 2  
+
+| Geography | Label Encoding |
+|---|---|
+| France | 0 |
+| Spain   | 1 |
+| Germany   | 2 |
 
 ---
 
@@ -185,7 +213,7 @@ L = − [ y log(ŷ) + (1 − y) log(1 − ŷ) ]
 # 📈 Model Performance
 
 | Metric | Value |
-|---|---|
+|------|------|
 | Training Accuracy | 86.13% |
 | Testing Accuracy | 85.65% |
 | Generalization Gap | 0.48% |
@@ -200,7 +228,7 @@ The minimal difference between training and testing accuracy indicates strong ge
 
 Predicted Stay vs Churn
 
-Actual Stay → 1532 True Negative | 75 False Positive  
+Actual Stay  → 1532 True Negative | 75 False Positive  
 Actual Churn → 212 False Negative | 181 True Positive  
 
 ---
